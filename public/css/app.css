@@ -83,7 +83,7 @@ nav .container_btnConnexion .btnConnexion {
   nav {
     flex-direction: column;
   }
-  nav .container_NavBar ul.NavBar {
+  nav ul.NavBar {
     width: 100%;
     min-width: 427px;
   }
@@ -113,15 +113,16 @@ nav .container_btnConnexion .btnConnexion {
   }
   nav .container_NavBar .logo {
     font-weight: bold;
-    font-size: max(3vw, 25px);
+    font-size: max(10vw, 25px);
     margin: 15px;
     width: fit-content;
   }
   nav .container_NavBar .fa-bars {
     display: inline-block;
     color: black;
-    border: 2px solid black;
+    border: 4px solid black;
     padding: 5px;
+    font-size: 30px;
   }
   nav .container_NavBar .fa-bars:hover {
     cursor: pointer;
@@ -142,6 +143,68 @@ nav .container_btnConnexion .btnConnexion {
   nav .btnConnexion {
     font-size: 0.8em;
     padding: 1em;
+  }
+}
+.container_banniere {
+  display: flex;
+  justify-content: center;
+  background-color: #f3f3f3;
+}
+.container_banniere .banniere {
+  height: 300px;
+  width: 50%;
+}
+.container_banniere .banniere h2 {
+  color: #dd4545;
+  width: fit-content;
+}
+.container_banniere .banniere img {
+  width: 100%;
+}
+.container_banniere .banniere p {
+  width: 100%;
+  margin-bottom: 30px;
+}
+.container_banniere .banniere a {
+  text-decoration: none;
+  color: white;
+  background-color: #dd4545;
+  border-radius: 20px;
+  padding: 15px 50px;
+}
+.container_banniere > img {
+  height: 250px;
+}
+
+@media (max-width: 768px) {
+  .container_banniere .banniere p {
+    font-size: max(2vw, 12px);
+    margin-bottom: max(6vw, 40px);
+  }
+  .container_banniere .banniere a {
+    font-size: max(2vw, 12px);
+    padding: 1em 3em;
+  }
+  .container_banniere img {
+    order: 1;
+  }
+}
+@media (max-width: 525px) {
+  .container_banniere {
+    flex-direction: column;
+    align-items: center;
+  }
+  .container_banniere .banniere {
+    order: 2;
+    height: 250px;
+    text-align: center;
+  }
+  .container_banniere .banniere h2 {
+    width: 100%;
+    text-align: center;
+  }
+  .container_banniere img {
+    order: 1;
   }
 }
 

@@ -355,5 +355,59 @@ section .interlude_banniere a {
     text-align: center;
   }
 }
+.container_card {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 50px;
+}
+.container_card div {
+  height: 300px;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+.container_card div p {
+  text-align: center;
+}
+.container_card div a {
+  text-decoration: none;
+  padding: 0.5em 1em;
+  text-transform: uppercase;
+  font-size: 12px;
+  border-radius: 3px;
+}
+.container_card .card-1,
+.container_card .card-3 {
+  background-color: #f3f2f3;
+}
+.container_card .card-1 i,
+.container_card .card-3 i {
+  border: 2px solid #343a40;
+  border-radius: 50%;
+  padding: 5px;
+}
+.container_card .card-1 a,
+.container_card .card-3 a {
+  background-color: #343a40;
+  color: white;
+}
+.container_card .card-2 {
+  background-color: #dd4545;
+  color: white;
+}
+.container_card .card-2 a {
+  background-color: white;
+  color: #343a40;
+}
+@media (max-width: 670px) {
+  .container_card div {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+}
 
 /*# sourceMappingURL=app.css.map */

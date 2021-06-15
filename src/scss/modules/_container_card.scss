@@ -1,0 +1,61 @@
+.container_card {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 50px;
+
+  div {
+    height: 300px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    p {
+      text-align: center;
+    }
+
+    a {
+      text-decoration: none;
+      padding: 0.5em 1em;
+      text-transform: uppercase;
+      font-size: 12px;
+      border-radius: 3px;
+    }
+  }
+
+  .card-1,
+  .card-3 {
+    background-color: rgb(243, 242, 243);
+
+    i {
+      border: 2px solid rgb(52, 58, 64);
+      border-radius: 50%;
+      padding: 5px;
+    }
+    a {
+      background-color: rgb(52, 58, 64);
+      color: white;
+    }
+  }
+  .card-2 {
+    background-color: $red-light;
+    color: white;
+    a {
+      background-color: white;
+      color: rgb(52, 58, 64);
+    }
+  }
+  .card-3 {
+  }
+}
+
+@media (max-width: 670px) {
+  .container_card {
+    div {
+      width: 100%;
+      margin-bottom: 30px;
+    }
+  }
+}

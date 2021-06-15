@@ -207,5 +207,45 @@ nav .container_btnConnexion .btnConnexion {
     order: 1;
   }
 }
+.section-categories {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 170px;
+  margin: 40px 0;
+}
+.section-categories div:nth-child(1) {
+  background-image: url("./img/services/service-1.jpg");
+}
+.section-categories div:nth-child(2) {
+  background-image: url("./img/services/service-2.jpg");
+}
+.section-categories div:nth-child(3) {
+  background-image: url("./img/services/slider-3.jpg");
+}
+.section-categories div {
+  flex-basis: max(30%, 276px);
+  height: 100%;
+  background-size: 100% 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.section-categories div h2 {
+  width: 70%;
+  color: white;
+  border-bottom: 2px solid white;
+  text-align: center;
+}
+
+@media (max-width: 1023px) {
+  .section-categories {
+    border: 2px solid green;
+  }
+  .section-categories div {
+    margin: 10px auto;
+  }
+}
 
 /*# sourceMappingURL=app.css.map */

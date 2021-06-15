@@ -104,6 +104,7 @@ nav .container_btnConnexion .btnConnexion {
 
   nav {
     width: 100%;
+    margin-bottom: 40px;
   }
   nav .container_NavBar {
     order: 2;
@@ -244,6 +245,78 @@ nav .container_btnConnexion .btnConnexion {
 @media (max-width: 1023px) {
   .section-categories div {
     margin: 10px auto;
+  }
+}
+.recents_Products {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.recents_Products .grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 15px;
+}
+.recents_Products .grid img {
+  height: max(5vh, 200px);
+  width: 100%;
+}
+.recents_Products .grid .description {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.recents_Products .grid .description .sale {
+  background-color: #dd4545;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 25px;
+  text-transform: uppercase;
+  font-size: 12px;
+  margin-right: 10px;
+}
+.recents_Products .grid .description .description_text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.recents_Products .grid .description .description_text p {
+  width: fit-content;
+}
+.recents_Products .grid .description .description_text p:last-child {
+  margin-top: 0;
+}
+.recents_Products .grid .description .description_text .barred,
+.recents_Products .grid .description .description_text .price {
+  font-weight: bold;
+}
+.recents_Products .grid .description .description_text .barred {
+  color: grey;
+  text-decoration: line-through;
+}
+.recents_Products .grid .description .description_text .price {
+  color: #dd4545;
+}
+
+@media (max-width: 526px) {
+  .recents_Products .grid {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .recents_Products .grid div {
+    margin-bottom: 15px;
+  }
+  .recents_Products .grid .description .description_text p,
+.recents_Products .grid .description .description_text .barred,
+.recents_Products .grid .description .description_text .price {
+    width: fit-content;
+    font-size: max(3vw, 14px);
+  }
+  .recents_Products .grid .description .description_text p:last-child {
+    margin-top: 0;
   }
 }
 

@@ -319,5 +319,41 @@ nav .container_btnConnexion .btnConnexion {
     margin-top: 0;
   }
 }
+section {
+  margin-top: 50px;
+  width: 100%;
+}
+section .interlude_banniere {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 450px;
+  width: 100%;
+  background-image: url(./img/cta-bg.jpg);
+  background-size: 100% 100%;
+  background-attachment: fixed;
+}
+section .interlude_banniere h1 {
+  color: white;
+  font-size: max(5vw, 30px);
+}
+section .interlude_banniere a {
+  text-decoration: none;
+  color: white;
+  background-color: #dd4545;
+  padding: 0.5em 1em;
+  border-radius: 5px;
+  text-transform: uppercase;
+  font-size: 11px;
+}
+
+@media (max-width: 569px) {
+  section .interlude_banniere h1 {
+    color: white;
+    font-size: max(5vw, 30px);
+    text-align: center;
+  }
+}
 
 /*# sourceMappingURL=app.css.map */

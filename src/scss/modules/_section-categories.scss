@@ -3,7 +3,7 @@
   justify-content: space-evenly;
   flex-wrap: wrap;
   width: 100%;
-  height: 170px;
+  height: fit-content;
   margin: 40px 0;
   div:nth-child(1) {
     background-image: url("./img/services/service-1.jpg");
@@ -16,7 +16,7 @@
   }
   div {
     flex-basis: max(30%, 276px);
-    height: 100%;
+    height: 170px;
     // width: 32%;
     background-size: 100% 100%;
     display: flex;
@@ -34,10 +34,6 @@
 
 @media (max-width: 1023px) {
   .section-categories {
-    @include bordered(green);
-    // min-height: 170px;
-    // height: fit-content !important;
-
     div {
       margin: 10px auto;
     }

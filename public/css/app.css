@@ -1,5 +1,7 @@
 body {
   width: 100vw;
+  display: flex;
+  justify-content: center;
 }
 
 .bodyContent {
@@ -212,7 +214,7 @@ nav .container_btnConnexion .btnConnexion {
   justify-content: space-evenly;
   flex-wrap: wrap;
   width: 100%;
-  height: 170px;
+  height: fit-content;
   margin: 40px 0;
 }
 .section-categories div:nth-child(1) {
@@ -226,7 +228,7 @@ nav .container_btnConnexion .btnConnexion {
 }
 .section-categories div {
   flex-basis: max(30%, 276px);
-  height: 100%;
+  height: 170px;
   background-size: 100% 100%;
   display: flex;
   justify-content: center;
@@ -240,9 +242,6 @@ nav .container_btnConnexion .btnConnexion {
 }
 
 @media (max-width: 1023px) {
-  .section-categories {
-    border: 2px solid green;
-  }
   .section-categories div {
     margin: 10px auto;
   }

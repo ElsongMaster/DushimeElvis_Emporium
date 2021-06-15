@@ -1,0 +1,148 @@
+body {
+  width: 100vw;
+}
+
+.bodyContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90%;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+nav {
+  display: flex;
+  align-items: flex-end;
+  width: 80%;
+}
+nav .container_NavBar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+nav .container_NavBar .logo {
+  font-weight: bold;
+  font-size: 40px;
+  margin: 15px;
+  width: fit-content;
+}
+nav .container_NavBar .fa-bars {
+  display: none;
+}
+nav .container_NavBar ul.NavBar {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+}
+nav .container_NavBar ul.NavBar li {
+  list-style-type: none;
+}
+nav .container_NavBar ul.NavBar li a {
+  font-size: 13px;
+  text-transform: uppercase;
+  color: black;
+  text-decoration: none;
+}
+nav .container_btnConnexion {
+  display: flex;
+  align-items: center;
+  height: 50px;
+}
+nav .container_btnConnexion button {
+  border: none;
+}
+nav .container_btnConnexion .day_mode,
+nav .container_btnConnexion .night_mode {
+  margin-right: 5px;
+  border-radius: 5px;
+  height: 20px;
+  width: 20px;
+}
+nav .container_btnConnexion .day_mode {
+  background-color: white;
+  border: 1px solid #c9c9c9;
+}
+nav .container_btnConnexion .night_mode {
+  background-color: black;
+}
+nav .container_btnConnexion .btnConnexion {
+  text-transform: uppercase;
+  color: white;
+  background-color: grey;
+}
+
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+  }
+  nav .container_NavBar ul.NavBar {
+    width: 100%;
+    min-width: 427px;
+  }
+  nav .container_btnConnexion {
+    display: flex;
+    justify-content: center;
+    width: 100% !important;
+  }
+}
+@media (max-width: 526px) {
+  body {
+    font-size: 10px;
+    width: 100vw;
+    overflow-x: hidden;
+  }
+
+  nav {
+    width: 100%;
+  }
+  nav .container_NavBar {
+    order: 2;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    height: 200px;
+  }
+  nav .container_NavBar .logo {
+    font-weight: bold;
+    font-size: max(3vw, 25px);
+    margin: 15px;
+    width: fit-content;
+  }
+  nav .container_NavBar .fa-bars {
+    display: inline-block;
+    color: black;
+    border: 2px solid black;
+    padding: 5px;
+  }
+  nav .container_NavBar .fa-bars:hover {
+    cursor: pointer;
+  }
+  nav .container_NavBar ul.NavBar {
+    display: none;
+  }
+  nav .container_btnConnexion {
+    order: 1;
+    height: 100%;
+    width: max-content !important;
+    display: flex;
+    justify-content: flex-end !important;
+    align-items: center;
+    margin-top: 20px;
+    width: 100% !important;
+  }
+  nav .btnConnexion {
+    font-size: 0.8em;
+    padding: 1em;
+  }
+}
+
+/*# sourceMappingURL=app.css.map */

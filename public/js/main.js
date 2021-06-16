@@ -50,14 +50,16 @@ document.addEventListener("scroll", () => {
 
 let btn_DayMode = document.querySelector(".day_mode");
 let btn_NightMode = document.querySelector(".night_mode");
-
+let tabP = Array.from(document.querySelectorAll(".description_text>p"));
 btn_DayMode.addEventListener("click", () => {
   document.body.style.backgroundColor = "white";
   navNode.style.backgroundColor = "white";
-
   container_NavBar.classList.remove("color_white");
   Array.from(container_NavBar.querySelectorAll("li>a")).forEach((elt) => {
     elt.classList.remove("color_white");
+  });
+  tabP.forEach((elt) => {
+    elt.classList.add("color_white");
   });
 });
 
@@ -66,6 +68,9 @@ btn_NightMode.addEventListener("click", () => {
   navNode.style.backgroundColor = "black";
   container_NavBar.classList.add("color_white");
   Array.from(container_NavBar.querySelectorAll("li>a")).forEach((elt) => {
+    elt.classList.add("color_white");
+  });
+  tabP.forEach((elt) => {
     elt.classList.add("color_white");
   });
 });

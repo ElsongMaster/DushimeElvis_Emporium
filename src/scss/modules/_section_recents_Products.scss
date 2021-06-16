@@ -2,15 +2,90 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 80%;
+  @include bordered(blue);
   .grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 15px;
+    // grid-auto-rows: minmax(300px, auto);
+    grid-auto-columns: minmax(200px, auto);
+    width: 95%;
 
-    img {
-      height: max(5vh, 200px);
-      width: 100%;
+    > div {
+      flex-basis: 314px;
     }
+
+    .luxury-sofa {
+      background-image: url("./img/products_mini/product-luxry-sofa.jpg");
+    }
+    .gloves {
+      background-image: url("./img/products_mini/product-gloves.jpg");
+    }
+    .cups {
+      background-image: url("./img/products_mini/product-cups.jpg");
+    }
+    .bag {
+      background-image: url("./img/products_mini/product-bag.jpg");
+    }
+    .t-shirt {
+      background-image: url("./img/products_mini/product-tshitr.jpg");
+    }
+    .plates {
+      background-image: url("./img/products_mini/product-plates.jpg");
+    }
+    .modern-sofa {
+      background-image: url("./img/products_mini/product-modern-sofa.jpg");
+    }
+    .bed {
+      background-image: url("./img/products_mini/product-bed.jpg");
+    }
+    .shoes {
+      background-image: url("./img/products_mini/product-shoes.jpg");
+    }
+    .img_div {
+      display: flex;
+      align-items: flex-end;
+      //   position: relative;
+      height: max(5vh, 200px);
+      width: 90%;
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+      transition: 1s;
+      .container-ActionCommand {
+        width: 100%;
+        display: flex !important;
+        @include bordered(purple);
+        // position: absolute;
+        // bottom: 0;
+        height: 0;
+        visibility: hidden;
+        transition: 1s;
+
+        > div {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 50%;
+          color: white;
+        }
+        .view {
+          background-color: rgb(0, 0, 0, 0.9);
+        }
+        .AddCart {
+          background-color: rgba(221, 69, 69, 0.95);
+        }
+      }
+    }
+    .img_div:hover {
+      width: 100%;
+      height: max(5.5vh, 220px);
+      .container-ActionCommand {
+        height: 30%;
+        visibility: visible;
+      }
+    }
+
     .description {
       display: flex;
       justify-content: center;
@@ -53,6 +128,25 @@
   }
 }
 
+@media (max-width: 1024px) {
+  .recents_Products {
+    //   display: flex;
+    //   flex-direction: column;
+    //   align-items: center;
+    .grid {
+      display: flex;
+      flex-wrap: wrap;
+      // display: grid;
+      // grid-template-columns: repeat(3, 1fr);
+      // grid-gap: 15px;
+
+      div {
+        flex-basis: 314px;
+        margin: 0 auto;
+      }
+    }
+  }
+}
 @media (max-width: 526px) {
   .recents_Products {
     //   display: flex;
@@ -66,6 +160,7 @@
       // grid-gap: 15px;
 
       div {
+        flex-basis: 314px;
         margin-bottom: 15px;
       }
       img {

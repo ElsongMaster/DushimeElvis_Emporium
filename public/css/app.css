@@ -292,15 +292,83 @@ nav .container_btnConnexion .btnConnexion {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 80%;
+  border: 2px solid blue;
 }
 .recents_Products .grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 15px;
+  grid-auto-columns: minmax(200px, auto);
+  width: 95%;
 }
-.recents_Products .grid img {
+.recents_Products .grid > div {
+  flex-basis: 314px;
+}
+.recents_Products .grid .luxury-sofa {
+  background-image: url("./img/products_mini/product-luxry-sofa.jpg");
+}
+.recents_Products .grid .gloves {
+  background-image: url("./img/products_mini/product-gloves.jpg");
+}
+.recents_Products .grid .cups {
+  background-image: url("./img/products_mini/product-cups.jpg");
+}
+.recents_Products .grid .bag {
+  background-image: url("./img/products_mini/product-bag.jpg");
+}
+.recents_Products .grid .t-shirt {
+  background-image: url("./img/products_mini/product-tshitr.jpg");
+}
+.recents_Products .grid .plates {
+  background-image: url("./img/products_mini/product-plates.jpg");
+}
+.recents_Products .grid .modern-sofa {
+  background-image: url("./img/products_mini/product-modern-sofa.jpg");
+}
+.recents_Products .grid .bed {
+  background-image: url("./img/products_mini/product-bed.jpg");
+}
+.recents_Products .grid .shoes {
+  background-image: url("./img/products_mini/product-shoes.jpg");
+}
+.recents_Products .grid .img_div {
+  display: flex;
+  align-items: flex-end;
   height: max(5vh, 200px);
+  width: 90%;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  transition: 1s;
+}
+.recents_Products .grid .img_div .container-ActionCommand {
   width: 100%;
+  display: flex !important;
+  border: 2px solid purple;
+  height: 0;
+  visibility: hidden;
+  transition: 1s;
+}
+.recents_Products .grid .img_div .container-ActionCommand > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  color: white;
+}
+.recents_Products .grid .img_div .container-ActionCommand .view {
+  background-color: rgba(0, 0, 0, 0.9);
+}
+.recents_Products .grid .img_div .container-ActionCommand .AddCart {
+  background-color: rgba(221, 69, 69, 0.95);
+}
+.recents_Products .grid .img_div:hover {
+  width: 100%;
+  height: max(5.5vh, 220px);
+}
+.recents_Products .grid .img_div:hover .container-ActionCommand {
+  height: 30%;
+  visibility: visible;
 }
 .recents_Products .grid .description {
   display: flex;
@@ -342,12 +410,23 @@ nav .container_btnConnexion .btnConnexion {
   color: #dd4545;
 }
 
+@media (max-width: 1024px) {
+  .recents_Products .grid {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .recents_Products .grid div {
+    flex-basis: 314px;
+    margin: 0 auto;
+  }
+}
 @media (max-width: 526px) {
   .recents_Products .grid {
     display: flex;
     flex-wrap: wrap;
   }
   .recents_Products .grid div {
+    flex-basis: 314px;
     margin-bottom: 15px;
   }
   .recents_Products .grid .description .description_text p,
@@ -473,7 +552,6 @@ footer .footerContent > div {
   display: flex;
   flex-direction: column;
   margin-right: 15px;
-  border: 2px solid blue;
 }
 footer .footerContent > div:first-child {
   color: #61727c;

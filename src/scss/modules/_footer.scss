@@ -20,7 +20,7 @@ footer {
       display: flex;
       flex-direction: column;
       margin-right: 15px;
-      @include bordered(blue);
+      //   @include bordered(blue);
     }
     > div:first-child {
       color: rgb(97, 114, 124);

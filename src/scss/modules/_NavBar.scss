@@ -46,8 +46,11 @@ nav {
       display: flex;
       justify-content: space-between;
       width: 90%;
+      // @include bordered(purple);
 
       li {
+        // @include bordered(yellow);
+        width: fit-content !important;
         list-style-type: none;
 
         a {
@@ -94,12 +97,26 @@ nav {
   }
 }
 
+.display_flex {
+  display: flex !important;
+  flex-direction: row !important;
+}
+.position_fixed {
+  background-color: white;
+  position: fixed;
+}
+.show {
+  display: flex !important;
+}
+
 @media (max-width: 768px) {
   nav {
     flex-direction: column;
     ul.NavBar {
+      margin-top: 0;
+      padding-top: 0;
       // border: 2px solid blue;
-      width: 100%;
+      // width: 100%;
       min-width: 427px;
     }
 
@@ -123,6 +140,8 @@ nav {
     margin-bottom: 40px;
 
     .container_NavBar {
+      // position: relative;
+      @include bordered(blue);
       order: 2;
       flex-direction: column;
       justify-content: center;
@@ -137,6 +156,7 @@ nav {
       }
 
       .fa-bars {
+        // position: absolute;
         display: inline-block;
         color: black;
         border: 4px solid black;
@@ -149,7 +169,19 @@ nav {
       }
 
       ul.NavBar {
+        flex-direction: column;
+        width: 100px !important;
+        justify-content: center;
+        align-items: center;
+        // position: absolute;
+        // @include bordered(red);
         display: none;
+        text-align: center;
+        padding: 0;
+        transition: 1s ease-in-out;
+        li {
+          line-height: 1.5;
+        }
       }
     }
     .container_btnConnexion {

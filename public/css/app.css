@@ -368,7 +368,7 @@ section .interlude_banniere a {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 0 auto;
+  margin: 20px auto;
 }
 .container_card div p {
   text-align: center;
@@ -403,10 +403,80 @@ section .interlude_banniere a {
   background-color: white;
   color: #343a40;
 }
+
 @media (max-width: 670px) {
   .container_card div {
     width: 100%;
     margin-bottom: 30px;
+  }
+}
+footer {
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+}
+footer .footerContent {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  background-color: #343a40;
+}
+footer .footerContent h4 {
+  text-transform: uppercase;
+  color: white;
+  font-size: 12px;
+}
+footer .footerContent > div {
+  min-height: 180px;
+  flex-basis: 250px;
+  display: flex;
+  flex-direction: column;
+  margin-right: 15px;
+  border: 2px solid blue;
+}
+footer .footerContent > div:first-child {
+  color: #61727c;
+}
+footer .footerContent div:nth-child(2) ul {
+  list-style-type: none;
+}
+footer .footerContent div:nth-child(2) ul li:before {
+  content: "> ";
+  font-size: 10px;
+  vertical-align: middle;
+  line-height: 15px;
+}
+footer .footerContent div:nth-child(2) ul li {
+  color: white;
+  margin-bottom: 5px;
+}
+footer .footerContent div:nth-child(2) ul li span {
+  position: relative;
+  left: 5px;
+}
+footer .footerContent .link-tag {
+  display: flex;
+  flex-wrap: wrap;
+}
+footer .footerContent .link-tag a {
+  text-decoration: none;
+  padding: 5px;
+  border: 2px solid gray;
+  border-radius: 5px;
+  color: #61727c;
+  margin-right: 5px;
+}
+footer .copyright {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  color: #61727c;
+}
+
+@media (max-width: 900px) {
+  footer .footerContent > div {
+    margin: 20px auto;
   }
 }
 

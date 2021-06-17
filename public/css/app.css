@@ -480,6 +480,7 @@ section .interlude_banniere a {
   justify-content: space-between;
   flex-wrap: wrap;
   margin-top: 50px;
+  transition: 1s;
 }
 .container_card div {
   height: 300px;

@@ -23,12 +23,28 @@ window.addEventListener("resize", () => {
 
 //NavBar fixed au scroll
 
+//Effet fade in sur les cartes
+let checkpoint = 1770;
+let container_card = document.querySelector(".container_card");
+let opacity = 0;
+let currentScroll;
+let fadeInCard = () => {
+  currentScroll = window.pageYOffset;
+  if (currentScroll >= checkpoint) {
+    opacity += currentScroll / checkpoint;
+  } else {
+    opacity = 0;
+  }
+  container_card.style.opacity = opacity;
+};
+
 let navNode;
 let NavBar_Node = document.querySelector(".NavBar");
 let container_NavBar = document.querySelector(".container_NavBar");
-document.addEventListener("scroll", () => {
+window.addEventListener("scroll", () => {
+  fadeInCard();
   navNode = document.querySelector("nav");
-  // console.log(window.pageYOffset);
+  //   console.log(window.pageYOffset);
   if (window.pageYOffset == 0) {
     container_NavBar.classList.remove("display_flex");
     navNode.classList.remove("position_fixed");

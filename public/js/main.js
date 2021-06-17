@@ -93,13 +93,20 @@ btn_NightMode.addEventListener("click", () => {
 });
 
 //Caroussel
-document.addEventListener("load", () => {
+let offsetL;
+window.addEventListener("load", () => {
+  console.log("wtf");
+  offsetL = Math.abs(tabSlides[0].offsetLeft) * 2 - 30;
+  // offsetL = tabSlides[0].offsetLeft * 2;
+  console.log(tabSlides[0].offsetLeft);
   tabSlides.forEach((elt) => {
-    if (!Array.from(elt.classList).includes("transform-init")) {
-      elt.classList.add("transform-init");
-    }
+    elt.setAttribute("style", `transform: translateX(${offsetL}px)`);
   });
 });
+let tabRondPoint = Array.from(
+  document.querySelectorAll(".container-RondPointer >a")
+);
+let previousRondPoint = tabRondPoint[0];
 let widthElt = tabSlides[0].offsetWidth;
 console.log(widthElt);
 let initial = 350;
@@ -108,27 +115,31 @@ let nbEltContainer = Math.floor(widthContainer / widthElt);
 console.log(nbEltContainer);
 let nbOffsetTranslet = Math.ceil(widthContainer / nbEltContainer);
 let limitOffset = nbOffsetTranslet * 7;
+let differenceIndice;
+let currentIndice;
+let previousIndice;
 console.log(nbOffsetTranslet);
-let translateSlide = (tabSlides, indice) => {
-  initial -= nbOffsetTranslet + 10;
-  if (indice == 0) {
-    // nbPixels = -100;
-  } else if (indice == 1) {
-  } else if (indice == 2) {
-  } else if (indice == 3) {
-  }
+let translateSlide = (tabSlides, tabRondPoint, rondPoint) => {
+  if (previousRondPoint != rondPoint) {
+    previousIndice = tabRondPoint.indexOf(previousRondPoint) + 1;
+    currentIndice = tabRondPoint.indexOf(rondPoint) + 1;
+    differenceIndice = Math.abs(previousIndice - currentIndice);
+    if (currentIndice < previousIndice) {
+      initial += nbOffsetTranslet * differenceIndice + 10;
+    } else {
+      initial -= nbOffsetTranslet * differenceIndice + 10;
+    }
 
-  tabSlides.forEach((elt) => {
-    console.log(initial);
-    elt.setAttribute("style", `transform: translateX(${initial}px)`);
-  });
+    previousRondPoint = rondPoint;
+    tabSlides.forEach((elt) => {
+      console.log(initial);
+      elt.setAttribute("style", `transform: translateX(${initial}px)`);
+    });
+  }
 };
 
 //ecoute des liens
 
-let tabRondPoint = Array.from(
-  document.querySelectorAll(".container-RondPointer >a")
-);
 console.log(tabRondPoint);
 console.log(tabSlides);
 tabRondPoint.forEach((elt) => {
@@ -138,6 +149,6 @@ tabRondPoint.forEach((elt) => {
       elt.classList.remove("transform-init");
       console.log(elt);
     });
-    translateSlide(tabSlides, 0);
+    translateSlide(tabSlides, tabRondPoint, elt);
   });
 });

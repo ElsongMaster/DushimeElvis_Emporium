@@ -1,0 +1,91 @@
+.container-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(0, 0, 0, 0.5);
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  z-index: 10;
+  .form-popup {
+    height: fit-content;
+    width: 40%;
+    border: 2px solid purple;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    .header-form {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .logo-form {
+        font-size: 30px;
+        font-weight: bold;
+      }
+      button {
+        height: fit-content;
+        background-color: $red-light;
+        color: white;
+        // mix-blend-mode: rgba(255, 255, 255, 0.5);
+      }
+    }
+    .btn-centrum {
+      display: flex;
+      justify-content: center;
+    }
+    form {
+      margin: 15px;
+      .form-line {
+        display: flex;
+        flex-direction: column;
+
+        p {
+          margin: 2px 0;
+        }
+      }
+      .form-lineCheck {
+        display: flex;
+      }
+      .form-line,
+      .form-lineCheck {
+        margin: 10px 0;
+      }
+      button {
+        display: inline-block;
+        margin-top: 10px;
+        background-color: rgb(0, 81, 255);
+        color: white;
+        border-radius: 5px;
+        font-size: 15px;
+        padding: 5px;
+      }
+    }
+    .connexion {
+      display: none;
+    }
+    .inscription {
+      .btn-inscription {
+        display: inline-block;
+        margin: 0 auto;
+      }
+    }
+    .footer-form {
+      display: flex;
+      justify-content: center;
+      //   @include bordered(red);
+      height: 100%;
+      i {
+        display: inline-block;
+        margin-right: 10px;
+        font-size: 25px;
+      }
+
+      .fa-facebook-f {
+        color: rgb(0, 81, 255);
+      }
+      .fa-snapchat-ghost {
+        color: rgb(226, 226, 2);
+      }
+    }
+  }
+}

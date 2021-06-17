@@ -152,3 +152,17 @@ tabRondPoint.forEach((elt) => {
     translateSlide(tabSlides, tabRondPoint, elt);
   });
 });
+
+let list_btnForm = document.querySelectorAll(".btn-centrum>button");
+let form_connexion = document.querySelector("form.connexion");
+let form_inscription = document.querySelector("form.inscription");
+
+list_btnForm[0].addEventListener("click", () => {
+  form_connexion.style.display = "block";
+  form_inscription.style.display = "none";
+});
+
+list_btnForm[1].addEventListener("click", () => {
+  form_connexion.style.display = "none";
+  form_inscription.style.display = "block";
+});

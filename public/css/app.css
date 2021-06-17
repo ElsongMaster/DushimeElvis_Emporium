@@ -22,6 +22,7 @@ nav {
   display: flex;
   align-items: flex-end;
   width: 80%;
+  z-index: 2;
 }
 nav .container_NavBar {
   display: flex;
@@ -306,10 +307,10 @@ nav .container_btnConnexion .btnConnexion {
   flex-basis: 314px;
 }
 .recents_Products .grid .luxury-sofa {
-  background-image: url("./img/products_mini/product-luxry-sofa.jpg");
+  background-image: url("./img/products_mini/product-luxry-sofa.jpg") !important;
 }
 .recents_Products .grid .gloves {
-  background-image: url("./img/products_mini/product-gloves.jpg");
+  background-image: url("./img/products_mini/product-gloves.jpg") !important;
 }
 .recents_Products .grid .cups {
   background-image: url("./img/products_mini/product-cups.jpg");
@@ -363,8 +364,7 @@ nav .container_btnConnexion .btnConnexion {
   background-color: rgba(221, 69, 69, 0.95);
 }
 .recents_Products .grid .img_div:hover {
-  width: 100%;
-  height: max(5.5vh, 220px);
+  transform: scale(1.1);
 }
 .recents_Products .grid .img_div:hover .container-ActionCommand {
   height: 30%;
@@ -475,6 +475,120 @@ section .interlude_banniere a {
     text-align: center;
   }
 }
+section .caroussel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+}
+section .caroussel h2 {
+  text-align: center;
+}
+section .caroussel .container-caroussel {
+  border: 2px solid blue;
+  display: flex;
+  justify-content: space-evenly;
+  width: 65%;
+  overflow-x: hidden;
+}
+section .caroussel .container-caroussel .container-slide {
+  margin-right: 20px;
+  transition: 1s;
+}
+section .caroussel .container-caroussel .container-slide .luxury-sofa {
+  background-image: url("./img/products_mini/product-luxry-sofa.jpg") !important;
+}
+section .caroussel .container-caroussel .container-slide .gloves {
+  background-image: url("./img/products_mini/product-gloves.jpg") !important;
+}
+section .caroussel .container-caroussel .container-slide .cups {
+  background-image: url("./img/products_mini/product-cups.jpg");
+}
+section .caroussel .container-caroussel .container-slide .bag {
+  background-image: url("./img/products_mini/product-bag.jpg");
+}
+section .caroussel .container-caroussel .container-slide .t-shirt {
+  background-image: url("./img/products_mini/product-tshitr.jpg");
+}
+section .caroussel .container-caroussel .container-slide .plates {
+  background-image: url("./img/products_mini/product-plates.jpg");
+}
+section .caroussel .container-caroussel .container-slide .modern-sofa {
+  background-image: url("./img/products_mini/product-modern-sofa.jpg");
+}
+section .caroussel .container-caroussel .container-slide .slide_img {
+  display: flex;
+  height: max(5vh, 200px);
+  width: 200px;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+section .caroussel .container-caroussel .container-slide .description {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+section .caroussel .container-caroussel .container-slide .description .sale {
+  background-color: #dd4545;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 25px;
+  text-transform: uppercase;
+  font-size: 12px;
+  margin-right: 10px;
+}
+section .caroussel .container-caroussel .container-slide .description .description_text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+section .caroussel .container-caroussel .container-slide .description .description_text p {
+  width: fit-content;
+}
+section .caroussel .container-caroussel .container-slide .description .description_text p:last-child {
+  margin-top: 0;
+}
+section .caroussel .container-caroussel .container-slide .description .description_text .barred,
+section .caroussel .container-caroussel .container-slide .description .description_text .price {
+  font-weight: bold;
+}
+section .caroussel .container-caroussel .container-slide .description .description_text .barred {
+  color: grey;
+  text-decoration: line-through;
+}
+section .caroussel .container-caroussel .container-slide .description .description_text .price {
+  color: #dd4545;
+}
+section .caroussel .container-RondPointer {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+section .caroussel .container-RondPointer a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 30px;
+  padding: 10px;
+  border: 2px solid white;
+  border-radius: 5px;
+}
+section .caroussel .container-RondPointer a .rondPointer {
+  border: 2px solid black;
+  border-radius: 50%;
+  padding: 5px;
+}
+section .caroussel .container-RondPointer a:hover {
+  border: 2px solid #30e6ec;
+}
+
+.transform-init {
+  transform: translateX(350px);
+}
+
 .container_card {
   display: flex;
   justify-content: space-between;

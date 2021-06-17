@@ -1,3 +1,4 @@
+let tabSlides = Array.from(document.querySelectorAll(".container-slide"));
 //NavBar partie dynamique
 
 let barsElt = document.querySelector(".fa-bars");
@@ -88,5 +89,55 @@ btn_NightMode.addEventListener("click", () => {
   });
   tabP.forEach((elt) => {
     elt.classList.add("color_white");
+  });
+});
+
+//Caroussel
+document.addEventListener("load", () => {
+  tabSlides.forEach((elt) => {
+    if (!Array.from(elt.classList).includes("transform-init")) {
+      elt.classList.add("transform-init");
+    }
+  });
+});
+let widthElt = tabSlides[0].offsetWidth;
+console.log(widthElt);
+let initial = 350;
+let widthContainer = document.querySelector(".container-caroussel").offsetWidth;
+let nbEltContainer = Math.floor(widthContainer / widthElt);
+console.log(nbEltContainer);
+let nbOffsetTranslet = Math.ceil(widthContainer / nbEltContainer);
+let limitOffset = nbOffsetTranslet * 7;
+console.log(nbOffsetTranslet);
+let translateSlide = (tabSlides, indice) => {
+  initial -= nbOffsetTranslet + 10;
+  if (indice == 0) {
+    // nbPixels = -100;
+  } else if (indice == 1) {
+  } else if (indice == 2) {
+  } else if (indice == 3) {
+  }
+
+  tabSlides.forEach((elt) => {
+    console.log(initial);
+    elt.setAttribute("style", `transform: translateX(${initial}px)`);
+  });
+};
+
+//ecoute des liens
+
+let tabRondPoint = Array.from(
+  document.querySelectorAll(".container-RondPointer >a")
+);
+console.log(tabRondPoint);
+console.log(tabSlides);
+tabRondPoint.forEach((elt) => {
+  elt.addEventListener("click", (e) => {
+    e.preventDefault();
+    tabSlides.forEach((elt) => {
+      elt.classList.remove("transform-init");
+      console.log(elt);
+    });
+    translateSlide(tabSlides, 0);
   });
 });

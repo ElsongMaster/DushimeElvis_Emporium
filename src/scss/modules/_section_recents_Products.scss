@@ -17,10 +17,10 @@
     }
 
     .luxury-sofa {
-      background-image: url("./img/products_mini/product-luxry-sofa.jpg");
+      background-image: url("./img/products_mini/product-luxry-sofa.jpg") !important;
     }
     .gloves {
-      background-image: url("./img/products_mini/product-gloves.jpg");
+      background-image: url("./img/products_mini/product-gloves.jpg") !important;
     }
     .cups {
       background-image: url("./img/products_mini/product-cups.jpg");
@@ -78,8 +78,7 @@
       }
     }
     .img_div:hover {
-      width: 100%;
-      height: max(5.5vh, 220px);
+      transform: scale(1.1);
       .container-ActionCommand {
         height: 30%;
         visibility: visible;

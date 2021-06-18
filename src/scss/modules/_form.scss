@@ -1,5 +1,5 @@
 .container-form {
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
   background-color: rgb(0, 0, 0, 0.5);
@@ -7,49 +7,86 @@
   width: 100vw;
   position: fixed;
   z-index: 10;
+
+  button {
+    cursor: pointer;
+    border: none;
+    border-radius: 2px;
+  }
   .form-popup {
     height: fit-content;
     width: 40%;
-    border: 2px solid purple;
+    // border: 2px solid purple;
     background-color: white;
     display: flex;
     flex-direction: column;
+    border-radius: 3px;
+    // @include bordered(yellow);
     .header-form {
       display: flex;
       justify-content: space-between;
       align-items: center;
+      padding-top: 0;
+      margin-bottom: 20px;
+      // @include bordered(green);
       .logo-form {
+        margin: 0;
         font-size: 30px;
         font-weight: bold;
+        padding-left: 10px;
       }
       button {
+        display: inline-block;
         height: fit-content;
         background-color: $red-light;
         color: white;
+        padding: 5px 10px;
+        margin: 10px;
         // mix-blend-mode: rgba(255, 255, 255, 0.5);
       }
     }
     .btn-centrum {
       display: flex;
       justify-content: center;
+      // @include bordered(grey);
+
+      button {
+        display: inline-block;
+        background-color: $red-light;
+        margin-right: 10px;
+        color: white;
+        // border-radius: 5px;
+        padding: 6px;
+      }
     }
     form {
-      margin: 15px;
+      margin: 5px 15px 15px 15px;
+      // @include bordered(blue);
       .form-line {
         display: flex;
         flex-direction: column;
+        margin: 15px 0;
+
+        label,
+        input {
+          display: inline-block;
+        }
+
+        input {
+          margin: 5px 0;
+        }
 
         p {
+          font-size: 14px;
           margin: 2px 0;
+          color: grey;
         }
       }
       .form-lineCheck {
         display: flex;
+        margin: 5px 0;
       }
-      .form-line,
-      .form-lineCheck {
-        margin: 10px 0;
-      }
+
       button {
         display: inline-block;
         margin-top: 10px;
@@ -57,23 +94,33 @@
         color: white;
         border-radius: 5px;
         font-size: 15px;
-        padding: 5px;
+        padding: 5px 10px;
+      }
+      .btn-inscription {
+        margin: 0 auto;
       }
     }
     .connexion {
       display: none;
     }
     .inscription {
-      .btn-inscription {
-        display: inline-block;
-        margin: 0 auto;
+      .container_btn-inscription {
+        display: flex;
+        justify-content: center;
       }
+
+      // text-align: center;
+      // .btn-inscription {
+      //   // display: block;
+      //   // margin-right: 50%;
+      // }
     }
     .footer-form {
       display: flex;
       justify-content: center;
-      //   @include bordered(red);
+      // @include bordered(red);
       height: 100%;
+      margin-bottom: 20px;
       i {
         display: inline-block;
         margin-right: 10px;

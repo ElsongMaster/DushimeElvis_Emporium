@@ -63,6 +63,7 @@ nav .container_btnConnexion {
 }
 nav .container_btnConnexion button {
   border: none;
+  cursor: pointer;
 }
 nav .container_btnConnexion .day_mode,
 nav .container_btnConnexion .night_mode {
@@ -646,7 +647,7 @@ section .caroussel .container-RondPointer a:hover {
   }
 }
 .container-form {
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
   background-color: rgba(0, 0, 0, 0.5);
@@ -655,48 +656,74 @@ section .caroussel .container-RondPointer a:hover {
   position: fixed;
   z-index: 10;
 }
+.container-form button {
+  cursor: pointer;
+  border: none;
+  border-radius: 2px;
+}
 .container-form .form-popup {
   height: fit-content;
   width: 40%;
-  border: 2px solid purple;
   background-color: white;
   display: flex;
   flex-direction: column;
+  border-radius: 3px;
 }
 .container-form .form-popup .header-form {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding-top: 0;
+  margin-bottom: 20px;
 }
 .container-form .form-popup .header-form .logo-form {
+  margin: 0;
   font-size: 30px;
   font-weight: bold;
+  padding-left: 10px;
 }
 .container-form .form-popup .header-form button {
+  display: inline-block;
   height: fit-content;
   background-color: #dd4545;
   color: white;
+  padding: 5px 10px;
+  margin: 10px;
 }
 .container-form .form-popup .btn-centrum {
   display: flex;
   justify-content: center;
 }
+.container-form .form-popup .btn-centrum button {
+  display: inline-block;
+  background-color: #dd4545;
+  margin-right: 10px;
+  color: white;
+  padding: 6px;
+}
 .container-form .form-popup form {
-  margin: 15px;
+  margin: 5px 15px 15px 15px;
 }
 .container-form .form-popup form .form-line {
   display: flex;
   flex-direction: column;
+  margin: 15px 0;
+}
+.container-form .form-popup form .form-line label,
+.container-form .form-popup form .form-line input {
+  display: inline-block;
+}
+.container-form .form-popup form .form-line input {
+  margin: 5px 0;
 }
 .container-form .form-popup form .form-line p {
+  font-size: 14px;
   margin: 2px 0;
+  color: grey;
 }
 .container-form .form-popup form .form-lineCheck {
   display: flex;
-}
-.container-form .form-popup form .form-line,
-.container-form .form-popup form .form-lineCheck {
-  margin: 10px 0;
+  margin: 5px 0;
 }
 .container-form .form-popup form button {
   display: inline-block;
@@ -705,19 +732,23 @@ section .caroussel .container-RondPointer a:hover {
   color: white;
   border-radius: 5px;
   font-size: 15px;
-  padding: 5px;
+  padding: 5px 10px;
+}
+.container-form .form-popup form .btn-inscription {
+  margin: 0 auto;
 }
 .container-form .form-popup .connexion {
   display: none;
 }
-.container-form .form-popup .inscription .btn-inscription {
-  display: inline-block;
-  margin: 0 auto;
+.container-form .form-popup .inscription .container_btn-inscription {
+  display: flex;
+  justify-content: center;
 }
 .container-form .form-popup .footer-form {
   display: flex;
   justify-content: center;
   height: 100%;
+  margin-bottom: 20px;
 }
 .container-form .form-popup .footer-form i {
   display: inline-block;

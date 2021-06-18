@@ -166,3 +166,21 @@ list_btnForm[1].addEventListener("click", () => {
   form_connexion.style.display = "none";
   form_inscription.style.display = "block";
 });
+
+//apparition formulaire
+
+let btnConnexionNav = document.querySelector(".btnConnexion");
+
+btnConnexionNav.addEventListener("click", () => {
+  document.querySelector(".container-form").style.display = "flex";
+  document.querySelector(".connexion").style.display = "block";
+  document.querySelector(".inscription").style.display = "none";
+  document.body.style.overflow = "hidden";
+});
+
+let btnXPopupForm = document.querySelector(".header-form> button");
+
+btnXPopupForm.addEventListener("click", () => {
+  document.querySelector(".container-form").style.display = "none";
+  document.body.style.overflow = "initial";
+});

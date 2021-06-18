@@ -3,12 +3,10 @@
   flex-direction: column;
   align-items: center;
   width: 80%;
-  // @include bordered(blue);
   .grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 15px;
-    // grid-auto-rows: minmax(300px, auto);
     grid-auto-columns: minmax(200px, auto);
     width: 95%;
 
@@ -44,20 +42,19 @@
       background-image: url("./img/products_mini/product-shoes.jpg");
     }
     .img_div {
-      display: flex;
-      align-items: flex-end;
-      //   position: relative;
+      position: relative;
       height: max(5vh, 200px);
       width: 90%;
       background-repeat: no-repeat;
       background-size: 100% 100%;
       transition: 1s;
+
       .container-ActionCommand {
         width: 100%;
         display: flex !important;
-        @include bordered(purple);
-        // position: absolute;
-        // bottom: 0;
+
+        position: absolute;
+        bottom: 0;
         height: 0;
         visibility: hidden;
         transition: 1s;
@@ -68,6 +65,7 @@
           align-items: center;
           width: 50%;
           color: white;
+          height: 100%;
         }
         .view {
           background-color: rgb(0, 0, 0, 0.9);
@@ -129,15 +127,9 @@
 
 @media (max-width: 1024px) {
   .recents_Products {
-    //   display: flex;
-    //   flex-direction: column;
-    //   align-items: center;
     .grid {
       display: flex;
       flex-wrap: wrap;
-      // display: grid;
-      // grid-template-columns: repeat(3, 1fr);
-      // grid-gap: 15px;
 
       div {
         flex-basis: 314px;
@@ -148,44 +140,17 @@
 }
 @media (max-width: 526px) {
   .recents_Products {
-    //   display: flex;
-    //   flex-direction: column;
-    //   align-items: center;
     .grid {
       display: flex;
       flex-wrap: wrap;
-      // display: grid;
-      // grid-template-columns: repeat(3, 1fr);
-      // grid-gap: 15px;
 
       div {
         flex-basis: 314px;
         margin-bottom: 15px;
       }
-      img {
-        //   height: max(5vh, 200px);
-        //   width: 100%;
-      }
+
       .description {
-        //   display: flex;
-        //   justify-content: center;
-        //   align-items: center;
-        .sale {
-          // background-color: $red-light;
-          // color: white;
-          // border-radius: 50%;
-          // display: flex;
-          // justify-content: center;
-          // align-items: center;
-          // padding: 30px 25px;
-          // text-transform: uppercase;
-          // font-size: 12px;
-          // margin-right: 10px;
-        }
         .description_text {
-          // display: flex;
-          // flex-direction: column;
-          // align-items: center;
           p,
           .barred,
           .price {

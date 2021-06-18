@@ -25,8 +25,9 @@ window.addEventListener("resize", () => {
 //NavBar fixed au scroll
 
 //Effet fade in sur les cartes
-let checkpoint = 1770;
 let container_card = document.querySelector(".container_card");
+let checkpoint = document.querySelector(".caroussel ").offsetTop - 75;
+console.log(checkpoint);
 let opacity = 0;
 let currentScroll;
 let fadeInCard = () => {
@@ -59,19 +60,28 @@ window.addEventListener("scroll", () => {
       navNode.classList.add("position_fixed");
       container_NavBar.classList.add("display_flex");
       NavBar_Node.classList.add("width_half");
-      if (document.body.offsetWidth > 525 && document.body.offsetWidth < 930) {
-        console.log("dans ma condition");
-
-        // container_NavBar.setAttribute(
-        //   "style",
-        //   "display:flex; flex-direction:column; border: 2px solid blue;"
-        // );
-
-        container_NavBar.classList.add("flex-directionColumn");
-      } else {
-        container_NavBar.classList.remove("flex-directionColumn");
-      }
     }
+  }
+});
+window.addEventListener("resize", () => {
+  let container_btnConnexion = document.querySelector(
+    ".container_btnConnexion"
+  );
+  if (document.body.offsetWidth > 525 && document.body.offsetWidth < 930) {
+    console.log("dans ma condition");
+
+    // container_NavBar.setAttribute(
+    //   "style",
+    //   "display:flex; flex-direction:column; border: 2px solid blue;"
+
+    // );
+
+    container_btnConnexion.classList.add("mg-right");
+
+    container_NavBar.classList.add("flex-directionColumn");
+  } else {
+    container_btnConnexion.classList.remove("mg-right");
+    container_NavBar.classList.remove("flex-directionColumn");
   }
 });
 
@@ -114,11 +124,16 @@ btn_NightMode.addEventListener("click", () => {
 
 //Caroussel
 let offsetL;
+let container_caroussel = document.querySelector(".container-caroussel");
 window.addEventListener("load", () => {
-  console.log("wtf");
-  offsetL = Math.abs(tabSlides[0].offsetLeft) * 2 - 30;
-  // offsetL = tabSlides[0].offsetLeft * 2;
-  console.log(tabSlides[0].offsetLeft);
+  fadeInCard();
+  if (window.offsetWidth > 1024) {
+    tabSlides.forEach((elt) => {
+      elt.style.width = Math.floor(container_caroussel.offsetWidth / 4) - 70;
+    });
+  }
+  offsetL = container_caroussel.offsetLeft + tabSlides[0].offsetWidth / 2;
+
   tabSlides.forEach((elt) => {
     elt.setAttribute("style", `transform: translateX(${offsetL}px)`);
   });
@@ -129,7 +144,7 @@ let tabRondPoint = Array.from(
 let previousRondPoint = tabRondPoint[0];
 let widthElt = tabSlides[0].offsetWidth;
 console.log(widthElt);
-let initial = 350;
+let initial = 210;
 let widthContainer = document.querySelector(".container-caroussel").offsetWidth;
 let nbEltContainer = Math.floor(widthContainer / widthElt);
 console.log(nbEltContainer);

@@ -16,19 +16,16 @@
   .form-popup {
     height: fit-content;
     width: 40%;
-    // border: 2px solid purple;
     background-color: white;
     display: flex;
     flex-direction: column;
     border-radius: 3px;
-    // @include bordered(yellow);
     .header-form {
       display: flex;
       justify-content: space-between;
       align-items: center;
       padding-top: 0;
       margin-bottom: 20px;
-      // @include bordered(green);
       .logo-form {
         margin: 0;
         font-size: 30px;
@@ -42,26 +39,22 @@
         color: white;
         padding: 5px 10px;
         margin: 10px;
-        // mix-blend-mode: rgba(255, 255, 255, 0.5);
       }
     }
     .btn-centrum {
       display: flex;
       justify-content: center;
-      // @include bordered(grey);
 
       button {
         display: inline-block;
         background-color: $red-light;
         margin-right: 10px;
         color: white;
-        // border-radius: 5px;
         padding: 6px;
       }
     }
     form {
       margin: 5px 15px 15px 15px;
-      // @include bordered(blue);
       .form-line {
         display: flex;
         flex-direction: column;
@@ -108,17 +101,10 @@
         display: flex;
         justify-content: center;
       }
-
-      // text-align: center;
-      // .btn-inscription {
-      //   // display: block;
-      //   // margin-right: 50%;
-      // }
     }
     .footer-form {
       display: flex;
       justify-content: center;
-      // @include bordered(red);
       height: 100%;
       margin-bottom: 20px;
       i {
@@ -133,6 +119,26 @@
       .fa-snapchat-ghost {
         color: rgb(226, 226, 2);
       }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .container-form {
+    .form-popup {
+      width: 80%;
+      form {
+        .form-line {
+          input {
+            display: inline-block;
+            margin-bottom: 5px;
+          }
+        }
+      }
+    }
+
+    label {
+      font-size: max(2.5vw, 14px);
     }
   }
 }

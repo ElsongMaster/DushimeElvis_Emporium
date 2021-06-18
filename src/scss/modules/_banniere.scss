@@ -2,15 +2,8 @@
   display: flex;
   justify-content: center;
   background-color: rgb(243, 243, 243);
-  > * {
-    // width: max-content;
-  }
+
   .banniere {
-    // @include bordered(red);
-    // * {
-    //   @include bordered(green);
-    // }
-    // align-items: center;
     height: 300px;
     width: 50%;
     h2 {
@@ -40,11 +33,7 @@
 
 @media (max-width: 768px) {
   .container_banniere {
-    // height: auto !important;
-
     .banniere {
-      h2 {
-      }
       p {
         font-size: max(2vw, 12px);
         margin-bottom: max(6vw, 40px);
@@ -63,7 +52,6 @@
   .container_banniere {
     flex-direction: column;
     align-items: center;
-    // height: auto !important;
 
     .banniere {
       order: 2;

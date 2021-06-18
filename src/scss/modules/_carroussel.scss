@@ -8,7 +8,6 @@ section {
       text-align: center;
     }
     .container-caroussel {
-      // @include bordered(blue);
       display: flex;
       justify-content: space-evenly;
       width: 65%;
@@ -40,8 +39,7 @@ section {
 
         .slide_img {
           display: flex;
-          //   align-items: flex-end;
-          //   position: relative;
+
           height: max(5vh, 200px);
           width: 200px;
           background-repeat: no-repeat;
@@ -121,6 +119,10 @@ section {
   flex-direction: column !important;
   width: 100% !important;
   align-items: center !important;
+}
+
+.mg-right {
+  margin-right: 30px !important;
 }
 
 @media (max-width: 526px) {

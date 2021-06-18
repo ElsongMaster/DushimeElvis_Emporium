@@ -336,8 +336,7 @@ nav .container_btnConnexion .btnConnexion {
   background-image: url("./img/products_mini/product-shoes.jpg");
 }
 .recents_Products .grid .img_div {
-  display: flex;
-  align-items: flex-end;
+  position: relative;
   height: max(5vh, 200px);
   width: 90%;
   background-repeat: no-repeat;
@@ -347,7 +346,8 @@ nav .container_btnConnexion .btnConnexion {
 .recents_Products .grid .img_div .container-ActionCommand {
   width: 100%;
   display: flex !important;
-  border: 2px solid purple;
+  position: absolute;
+  bottom: 0;
   height: 0;
   visibility: hidden;
   transition: 1s;
@@ -358,6 +358,7 @@ nav .container_btnConnexion .btnConnexion {
   align-items: center;
   width: 50%;
   color: white;
+  height: 100%;
 }
 .recents_Products .grid .img_div .container-ActionCommand .view {
   background-color: rgba(0, 0, 0, 0.9);
@@ -596,6 +597,10 @@ section .caroussel .container-RondPointer a:hover {
   align-items: center !important;
 }
 
+.mg-right {
+  margin-right: 30px !important;
+}
+
 @media (max-width: 526px) {
   section .caroussel .container-RondPointer a {
     margin-right: 15px;
@@ -657,7 +662,7 @@ section .caroussel .container-RondPointer a:hover {
 
 @media (max-width: 670px) {
   .container_card div {
-    width: 100%;
+    width: 80%;
     margin-bottom: 30px;
   }
 }
@@ -777,6 +782,18 @@ section .caroussel .container-RondPointer a:hover {
   color: #e2e202;
 }
 
+@media (max-width: 768px) {
+  .container-form .form-popup {
+    width: 80%;
+  }
+  .container-form .form-popup form .form-line input {
+    display: inline-block;
+    margin-bottom: 5px;
+  }
+  .container-form label {
+    font-size: max(2.5vw, 14px);
+  }
+}
 footer {
   display: flex;
   flex-direction: column;
@@ -789,6 +806,7 @@ footer .footerContent {
   background-color: #343a40;
 }
 footer .footerContent h4 {
+  text-align: center;
   text-transform: uppercase;
   color: white;
   font-size: 12px;
@@ -842,7 +860,23 @@ footer .copyright {
 
 @media (max-width: 900px) {
   footer .footerContent > div {
-    margin: 20px auto;
+    margin: 0 auto;
+    align-items: center;
+  }
+  footer .footerContent > div p {
+    text-align: center;
+    line-height: 2;
+  }
+  footer .footerContent > div ul {
+    line-height: 1.7;
+  }
+  footer .footerContent > div .link-tag {
+    justify-content: center;
+    align-items: center;
+  }
+  footer .footerContent > div .link-tag a {
+    display: inline-block;
+    margin-bottom: 5px;
   }
 }
 

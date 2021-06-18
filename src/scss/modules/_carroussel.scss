@@ -8,7 +8,7 @@ section {
       text-align: center;
     }
     .container-caroussel {
-      @include bordered(blue);
+      // @include bordered(blue);
       display: flex;
       justify-content: space-evenly;
       width: 65%;
@@ -115,4 +115,26 @@ section {
 
 .transform-init {
   transform: translateX(350px);
+}
+
+.flex-directionColumn {
+  flex-direction: column !important;
+  width: 100% !important;
+  align-items: center !important;
+}
+
+@media (max-width: 526px) {
+  section {
+    .caroussel {
+      .container-RondPointer {
+        a {
+          margin-right: 15px;
+          .rondPointer {
+            padding: 3px;
+            border: 1px solid black;
+          }
+        }
+      }
+    }
+  }
 }

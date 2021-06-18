@@ -59,6 +59,18 @@ window.addEventListener("scroll", () => {
       navNode.classList.add("position_fixed");
       container_NavBar.classList.add("display_flex");
       NavBar_Node.classList.add("width_half");
+      if (document.body.offsetWidth > 525 && document.body.offsetWidth < 930) {
+        console.log("dans ma condition");
+
+        // container_NavBar.setAttribute(
+        //   "style",
+        //   "display:flex; flex-direction:column; border: 2px solid blue;"
+        // );
+
+        container_NavBar.classList.add("flex-directionColumn");
+      } else {
+        container_NavBar.classList.remove("flex-directionColumn");
+      }
     }
   }
 });
@@ -78,6 +90,10 @@ btn_DayMode.addEventListener("click", () => {
   tabP.forEach((elt) => {
     elt.classList.add("color_white");
   });
+  document.querySelector(".fa-bars").style.color = "black";
+  if (document.body.offsetWidth <= 525) {
+    document.querySelector(".fa-bars").style.border = " 4px solid black";
+  }
 });
 
 btn_NightMode.addEventListener("click", () => {
@@ -90,6 +106,10 @@ btn_NightMode.addEventListener("click", () => {
   tabP.forEach((elt) => {
     elt.classList.add("color_white");
   });
+  document.querySelector(".fa-bars").style.color = "white";
+  if (document.body.offsetWidth <= 525) {
+    document.querySelector(".fa-bars").style.border = " 4px solid white";
+  }
 });
 
 //Caroussel

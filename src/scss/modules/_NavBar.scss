@@ -118,6 +118,7 @@ nav {
 .position_fixed {
   background-color: white;
   position: fixed;
+  top: 0;
   width: 100vw !important;
 }
 .show {
@@ -132,7 +133,7 @@ nav {
       padding-top: 0;
       // border: 2px solid blue;
       // width: 100%;
-      min-width: 427px;
+      // min-width: 427px;
     }
 
     .container_btnConnexion {
@@ -153,16 +154,17 @@ nav {
   nav {
     width: 100%;
     margin-bottom: 40px;
-
+    // @include bordered(green);
+    align-items: center;
     .container_NavBar {
-      // position: relative;
-      @include bordered(blue);
+      position: relative;
+      // @include bordered(blue);
       order: 2;
-      flex-direction: column;
+      flex-direction: column !important;
       justify-content: center;
       align-items: center;
       width: 90%;
-      height: 200px;
+      height: fit-content;
       .logo {
         font-weight: bold;
         font-size: max(10vw, 25px);
@@ -185,7 +187,6 @@ nav {
 
       ul.NavBar {
         flex-direction: column;
-        width: 100px !important;
         justify-content: center;
         align-items: center;
         // position: absolute;
@@ -195,7 +196,11 @@ nav {
         padding: 0;
         transition: 1s ease-in-out;
         li {
-          line-height: 1.5;
+          // @include bordered(purple);
+          // display: ;
+          margin-bottom: 5px;
+          // width: 100% !important;
+          line-height: 1.5 !important;
         }
       }
     }
@@ -207,6 +212,7 @@ nav {
       justify-content: flex-end !important;
       align-items: center;
       margin-top: 20px;
+      margin-right: 10px;
       width: 100% !important;
     }
     .btnConnexion {

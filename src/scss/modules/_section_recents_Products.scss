@@ -3,7 +3,7 @@
   flex-direction: column;
   align-items: center;
   width: 80%;
-  @include bordered(blue);
+  // @include bordered(blue);
   .grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);

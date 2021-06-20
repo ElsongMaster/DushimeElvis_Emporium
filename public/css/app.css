@@ -6506,6 +6506,10 @@ nav .container_btnConnexion .btnConnexion {
   height: 20%;
   visibility: visible;
 }
+.recents_Products .grid .img_div:hover .container-ActionCommand .view,
+.recents_Products .grid .img_div:hover .container-ActionCommand .AddCart {
+  cursor: pointer;
+}
 .recents_Products .grid .description {
   display: flex;
   justify-content: center;

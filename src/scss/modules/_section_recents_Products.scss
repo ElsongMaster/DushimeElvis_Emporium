@@ -80,6 +80,10 @@
       .container-ActionCommand {
         height: 20%;
         visibility: visible;
+        .view,
+        .AddCart {
+          cursor: pointer;
+        }
       }
     }
 

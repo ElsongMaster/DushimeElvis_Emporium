@@ -1,32 +1,42 @@
 body {
-  width: 100vw;
+  width: 97vw;
   display: flex;
   justify-content: center;
+  padding: 0;
+  margin: 0;
 }
 .bodyContent {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 90%;
+  margin: 0;
+  padding: 0;
 }
 header {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
+  margin: 0;
+  padding: 0;
 }
 nav {
   display: flex;
   align-items: flex-end;
   width: 80%;
   z-index: 2;
+  margin: 0;
+  padding: 0;
 
   .container_NavBar {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     width: 100%;
+    padding: 0;
+    margin: 0;
+
     .logo {
       font-weight: bold;
       font-size: 40px;
@@ -42,6 +52,7 @@ nav {
       display: flex;
       justify-content: space-between;
       width: 90%;
+      height: 100% !important;
 
       li {
         width: fit-content !important;
@@ -62,6 +73,7 @@ nav {
     display: flex;
     align-items: center;
     height: 50px;
+    margin-left: 20px;
 
     button {
       border: none;
@@ -107,7 +119,10 @@ nav {
   background-color: white;
   position: fixed;
   top: 0;
-  width: 100vw !important;
+  width: 97vw !important;
+  .container_btnConnexion {
+    height: 80px;
+  }
 }
 .show {
   display: flex !important;
@@ -129,10 +144,10 @@ nav {
   }
 }
 
-@media (max-width: 526px) {
+@media (max-width: 536px) {
   body {
     font-size: 10px;
-    width: 100vw;
+    width: 97vw;
     overflow-x: hidden;
   }
   nav {

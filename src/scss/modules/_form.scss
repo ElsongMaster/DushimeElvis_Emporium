@@ -39,6 +39,11 @@
         color: white;
         padding: 5px 10px;
         margin: 10px;
+        opacity: 0.7;
+      }
+
+      button:hover {
+        opacity: 1;
       }
     }
     .btn-centrum {
@@ -48,9 +53,10 @@
       button {
         display: inline-block;
         background-color: $red-light;
-        margin-right: 10px;
+        margin-right: 20px;
         color: white;
-        padding: 6px;
+        padding: 10px;
+        border-radius: 5px;
       }
     }
     form {
@@ -123,6 +129,9 @@
   }
 }
 
+.active_btn {
+  border: 2px solid rgb(241, 154, 154) !important;
+}
 @media (max-width: 768px) {
   .container-form {
     .form-popup {

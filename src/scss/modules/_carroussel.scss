@@ -111,6 +111,10 @@ section {
   }
 }
 
+.border_fichua {
+  border: 2px solid rgb(48, 230, 236) !important;
+}
+
 .transform-init {
   transform: translateX(350px);
 }
@@ -123,6 +127,10 @@ section {
 
 .mg-right {
   margin-right: 30px !important;
+}
+
+.border_none {
+  border: none;
 }
 
 @media (max-width: 526px) {
